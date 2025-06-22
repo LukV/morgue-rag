@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "🐶 CLI: say",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "graphraggle.cli",
+            "args": [
+                "grggl",
+                "say",
+                "meeeh"
+            ],
+            "justMyCode": true,
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        }
+    ]
+}
