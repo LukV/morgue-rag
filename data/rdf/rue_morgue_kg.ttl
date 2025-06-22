@@ -1,0 +1,58 @@
+@prefix ex: <http://example.org/rue_morgue/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Case ex:consideredClosedBy ex:Prefect .
+
+ex:Lemaire a foaf:Person ;
+    ex:heardArgument "In French, sounded theatrical"^^xsd:string .
+
+ex:MadameDeluc a foaf:Person ;
+    ex:heardFootsteps "Shortly before midnight"^^xsd:string ;
+    ex:identifiedFootstepsAs "A gentleman’s tread"^^xsd:string .
+
+ex:Narrator a foaf:Person ;
+    ex:found ex:WigPin ;
+    ex:suspected ex:Dupin .
+
+ex:Sailor a foaf:Person ;
+    ex:leftCity "Shortly after questioning"^^xsd:string ;
+    ex:owned ex:Orangutan .
+
+ex:Witness1 a foaf:Person ;
+    ex:heardVoice ex:UnknownLanguage .
+
+ex:CrimeScene ex:hasVictim ex:Daughter,
+        ex:Mother .
+
+ex:Daughter a foaf:Person ;
+    ex:foundIn ex:Chimney .
+
+ex:Dupin a foaf:Person ;
+    ex:avoidedTopic ex:RueMorgueAffair ;
+    ex:collectedEvidence ex:Razor ;
+    ex:examined ex:WindowLatch ;
+    ex:hadMotive "To terrify Paris into rediscovering its virtue"^^xsd:string ;
+    ex:lackedAlibi "Missing for an hour the night of the murders"^^xsd:string ;
+    ex:owned ex:WigPin ;
+    ex:proposedCulprit ex:Orangutan ;
+    ex:purchased ex:RedCravat ;
+    ex:released ex:Orangutan ;
+    ex:separatedFromNarrator "During the walk before the murders"^^xsd:string ;
+    ex:statedBelief "Paris needs terror to regain virtue"^^xsd:string .
+
+ex:Mother a foaf:Person ;
+    ex:diedFrom ex:Decapitation .
+
+ex:Prefect a foaf:Person .
+
+ex:RedCravat ex:foundAtScene "Scrap of fabric"^^xsd:string ;
+    ex:purchaseDate "Day before the murders"^^xsd:string .
+
+ex:WindowLatch ex:claimedState "Locked from inside"^^xsd:string .
+
+ex:WigPin a ex:Object ;
+    ex:foundAt ex:CrimeScene .
+
+ex:Orangutan a ex:Creature .
+

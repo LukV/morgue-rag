@@ -188,7 +188,6 @@ cython_debug/
 
 # LVE add user data
 *.db
-data/
 inbox/
 alembic.ini
 CLAUDE.md
