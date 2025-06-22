@@ -5,7 +5,7 @@
             "name": "🐶 CLI: say",
             "type": "debugpy",
             "request": "launch",
-            "module": "graphraggle.cli",
+            "module": "morgue-rag.cli",
             "args": [
                 "grggl",
                 "say",

@@ -35,8 +35,7 @@ indent-width = 4
 # Assume Python 3.12
 target-version = "py312"
 
-[lint]
-# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+# Enable all rules by default
 select = ["ALL"]
 ignore = [
     "COM812",
@@ -59,15 +58,20 @@ ignore = [
     "W191",
     "EM101",
     "G004",
-    "S608"
+    "S608",
 ]
 
+[lint]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
 unfixable = []
 
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Ignore specific rules in specific files
+[lint.per-file-ignores]
+"tests/**" = ["INP001", "S101"]
 
 [format]
 # Like Black, use double quotes for strings.
@@ -78,10 +82,3 @@ indent-style = "space"
 
 # Like Black, respect magic trailing commas.
 skip-magic-trailing-comma = false
-
-# Like Black, automatically detect the appropriate line ending.
-line-ending = "auto"
-
-[lint.per-file-ignores]
-# Ignore all directories named `tests`.
-"tests/**" = ["INP001", "S101"]
